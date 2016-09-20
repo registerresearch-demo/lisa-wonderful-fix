@@ -1,0 +1,16 @@
+This is just a fake sample
+
+
+    public void More ...ensureCapacity(int minCapacity) {
+179         modCount++;
+180         int oldCapacity = elementData.length;
+181         if (minCapacity > oldCapacity) {
+182             Object oldData[] = elementData;
+183             int newCapacity = (oldCapacity * 3)/2 + 1;
+184             if (newCapacity < minCapacity)
+185                 newCapacity = minCapacity;
+186             // minCapacity is usually close to size, so this is a win:
+187             elementData = Arrays.copyOf(elementData, newCapacity);
+188         }
+189     }
+
